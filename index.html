@@ -87,18 +87,33 @@
 
     <script>
       function updateText() {
-          var input = document.getElementById("input").value;
+  var input = document.getElementById("input").value;
 
-          var chunks = input.match(/.{1,2000}/g);
+  // Split input into chunks of maximum 2000 characters
+  var chunks = input.match(/.{1,2000}/g);
 
-          var output = "";
+  var output = "";
 
-          for (var i = 0; i < chunks.length; i++) {
-              output += '<div class="text-container"><textarea class="text" readonly>' + chunks[i] + '</textarea><button class="copy-button" onclick="copyText(event)">Copy</button></div>';
-          }
+  for (var i = 0; i < chunks.length; i++) {
+    var chunk = chunks[i];
+    
+    // If chunk length is 2000 and not the last chunk, add "WILL CONTINUE" at the end
+    if (chunk.length === 2000 && i < chunks.length - 1) {
+      chunk += " WILL CONTINUE.";
+    }
+    
+    // If not the first chunk, add "CONTINUE:" at the beginning
+    if (i > 0) {
+      output += '<div class="text-container"><textarea class="text" readonly>CONTINUE:\n' + chunk + '</textarea><button class="copy-button" onclick="copyText(event)">Copy</button></div>';
+    } else {
+      output += '<div class="text-container"><textarea class="text" readonly>' + chunk + '</textarea><button class="copy-button" onclick="copyText(event)">Copy</button></div>';
+    }
+  }
 
-          document.getElementById("output").innerHTML = output.trim();
-      }
+  document.getElementById("output").innerHTML = output.trim();
+}
+
+
 
       function updateCounter() {
           var input = document.getElementById("input").value.length;
