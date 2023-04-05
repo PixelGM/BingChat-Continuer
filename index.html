@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Bing Chat Continuer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #fafafa;
+        }
+        h1 {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-align: center;
         }
         .container {
             position: absolute;
@@ -79,6 +86,7 @@
 </head>
 <body>
     <div class="container">
+        <h1>Bing Chat Continuer</h1>
         <textarea id="input" placeholder="Enter text here" oninput="updateCounter()"></textarea>
         <p id="counter">0/2000</p>
         <button onclick="updateText()">Update Text</button>
@@ -107,7 +115,7 @@
 
   var output = "";
   for (var i = 0; i < chunks.length; i++) {
-    output += '<div class="text-container"><textarea class="text" readonly>' + chunks[i] + '</textarea><button class="copy-button" onclick="copyText(event)">Copy</button></div>';
+    output += '<div class="text-container"><textarea class="text" readonly>' + chunks[i].replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</textarea><button class="copy-button" onclick="copyText(event)">Copy</button></div>';
   }
 
   document.getElementById("output").innerHTML = output.trim();
