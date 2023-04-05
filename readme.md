@@ -1,15 +1,16 @@
 
 # Bing Chat Continuer
 
-Bing Chat Continuer is a web application that allows users to enter a large text and split it into smaller chunks to bypass the 2000 characters limit imposed by Bing Chat API. The application splits the text into chunks of up to 1980 characters each, and appends a continuation message at the end of each chunk.
+Bing Chat Continuer is a web application that automatically splits large texts into smaller chunks of up to 1980 characters each, with a continuation message at the end of each chunk. This allows users to bypass the 2000 character limit imposed by the Bing Chat API.
+
 
 ## Usage
 
 To use the Bing Chat Continuer, follow these steps:
 
-1.  Open the [Bing Chat Continuer](https://example.com/bing-chat-continuer) web application in your browser.
-2.  Enter your text in the "Enter text here" textarea.
-3.  Click on the "Update Text" button to split the text into smaller chunks.
+1.  Open the [Bing Chat Continuer](https://bing-chat-continuer.vercel.app/) web application in your browser.
+2.  Enter your text in the "Enter text here" text area.
+3.  The text will be automatically split into smaller chunks with a continuation message appended at the end of each chunk.
 4.  Copy the desired chunk of text by clicking on the "Copy" button on the right side of each chunk.
 
 ## Implementation
@@ -32,4 +33,4 @@ The JavaScript file contains the following functions:
 
 ## Conclusion
 
-The Bing Chat Continuer is a simple and effective solution to split large texts for use with Bing Chat API. The web application is easy to use and can save time for developers who need to work with long texts in their chatbots.
+Bing Chat Continuer is a simple and effective solution to split large texts for use with Bing Chat API. The web application is easy to use and can save time for developers who need to work with long texts in their chatbots. With the automatic update feature, it is now even more convenient to use.
