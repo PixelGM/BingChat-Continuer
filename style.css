@@ -111,6 +111,17 @@ button:not(:hover):after {
   body {
     font-size: 16px;
   }
+
+  .copy-button {
+    /* styles for the copy button on screens smaller than or equal to 600px */
+    position: static;
+    margin-top: 10px;
+  }
+
+  .text-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 @keyframes fill {
