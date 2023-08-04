@@ -1,6 +1,8 @@
 
 # Bing Chat Continuer
 
+![imag](images/imag.png)
+
 Bing Chat Continuer is a responsive web application that automatically splits large texts into smaller chunks of up to 1980 characters each, with a continuation message at the end of each chunk. This allows users to bypass the 2000 character limit imposed by the Bing Chat API.
 
 
